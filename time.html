@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function click() {
+            setInterval(() => {
+                var now = new Date();
+                var hrs = now.getHours();
+                var min = now.getMinutes();
+                var sec = now.getSeconds();
+                var month = ["jan", "feb", "march", "april", "may", "june", "july", "august", "sept", "oct", "nov", "dec"];
+                var days = ["sun", "mon", "tue", "wed", "thrus", "fri", "sat"];
+                var weekdays = now.getDay();
+                var mon = now.getMonth();
+                var date = now.getDate();
+                var years = now.getFullYear();
+                var today = days[weekdays] + " " + month[mon] + " " + date + " " + years;
+                var time = hrs + ": " + min + ": " + sec + "<br>" + " Date: " + today;
+                var msg = document.getElementById("msg");
+                msg.innerHTML = "Current Time:" + " " + time;
+                var msg = document.getElementById("msg").style.font = "150px";
+                var ms = document.getElementById("ms");
+              
+            }, 1000);
+           
+
+        }
+
+    </script>
+
+
+</head>
+
+<body onload="click()" style="background-color: blueviolet;">
+    <section>
+
+        <table width="400" align="center"
+            style="margin-left: 250px; margin-top: 50px; color: white; background-color: yellow;">
+            <tr>
+                <td id="msg" width="500" align="left" style="margin-left: 5px;">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="font-size: 20px;">It is the International Time which is schedule on current time</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+
+</html>
