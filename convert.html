@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function convert(){
+            var number=document.getElementById("number").value;
+            var convert=document.getElementById("convert")
+            var option1=document.getElementById("check1");
+            var option2=document.getElementById("check2");
+           var num=parseInt(number);
+            if(option1.checked==true){
+             var a= (number-32)*5/9;
+             document.getElementById("show").innerHTML="convertion of kelvin into fahreneit"+" "+ a;
+            }if(option2.checked==true){
+                var b=(number+459.67)*0.55;
+                document.getElementById("show").innerHTML=" convertion of fahreneit into kelvin is"+" "+ b;
+          }
+        }
+    </script>
+   
+</head>
+<body>
+
+    <section style="position: absolute;">
+        <table border="2" align="center" style="margin-left: 250px; margin-top: 100px;">
+            <tr>
+                <td colspan="3"><h1 align="center">Conversion of unit </h1></td>
+            </tr>
+            <tr>
+                <td> <h1>select</h1></td>
+                <td><input type="checkbox" id="check1" name="radio" value="convert into fahreniet">convert into fahreniet</td>
+                <td><input type="checkbox" id="check2" name="radio" value="convert into kelvin">convert into kelvin</td>
+            </tr>
+            <tr>
+                <td colspan="1" >Enter Number</td>
+                <td colspan="2"> <input type="text" id="number" placeholder="should be integer" ></td>
+            </tr>
+            <tr>
+                <td colspan="1">Submit</td>
+                <td colspan="2"><input type="button" id="convert" value="convert" onclick="convert()"> </td>
+            </tr>
+            <tr>
+                <td colspan="1"> Answer:</td>
+                <td colspan="2"><h3 id="show"></h3></td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>                                                                                                             
